@@ -1,0 +1,12 @@
+# terraform.tfvars file is used to set the variables in the terraform configuration file.
+region               = "us-east-1"
+project_name         = "AWS_HANDS-ON"
+vpc_cidr             = "192.168.16.0/24"
+instance_tenancy     = "default"
+enable_dns_hostnames = "true"
+public_subnet_az1_a  = "192.168.16.0/27"
+public_subnet_az1_b  = "192.168.16.32/27"
+public_subnet_az1_c  = "192.168.16.64/27"
+private_subnet_az1_a = "192.168.16.96/27"
+private_subnet_az1_b = "192.168.16.128/27"
+private_subnet_az1_c = "192.168.16.192/27"
