@@ -28,15 +28,15 @@ jobs:
 
     - name: Initialize Terraform
       run: terraform init
-      working-directory: ./Create a Custom VPC with Subnets
+      working-directory: ./3tiers-Infrastructure
 
     - name: Plan Terraform deployment
       run: terraform plan
-      working-directory: ./Create a Custom VPC with Subnets
+      working-directory: ./3tiers-Infrastructure
 
     - name: apply Terraform deployment
       run: terraform apply -auto-approve
-      working-directory: ./Create a Custom VPC with Subnets
+      working-directory: ./3tiers-Infrastructure
       
     #- name: destroy Terraform deployment
     #  run: terraform destroy -auto-approve
