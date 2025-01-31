@@ -18,5 +18,5 @@ module "Security_Groups" {
   source = "./modules/Security_Groups"
   vpc_id = module.vpc.vpc_id
   my_ip  = var.my_ip
-  SG_name = var.sg_name
+  sg_name = var.sg_name
 }
