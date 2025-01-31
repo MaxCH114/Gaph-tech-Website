@@ -10,8 +10,10 @@ module "vpc" {
   private_subnet_az1_a = var.private_subnet_az1_a
   private_subnet_az1_b = var.private_subnet_az1_b
   private_subnet_az1_c = var.private_subnet_az1_c
+  db_subnet_az1_a      = var.db_subnet_az1_a
+  db_subnet_az1_b      = var.db_subnet_az1_b
+  db_subnet_az1_c      = var.db_subnet_az1_c
   region               = var.region
-  
 }
 
 module "Security_Groups" {

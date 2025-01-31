@@ -9,5 +9,8 @@ variable "public_subnet_az1_c"  {}
 variable "private_subnet_az1_a" {}
 variable "private_subnet_az1_b" {}
 variable "private_subnet_az1_c" {}
+variable "db_subnet_az1_a"      {}
+variable "db_subnet_az1_b"      {}
+variable "db_subnet_az1_c"      {}
 variable "region"               {}
 variable "vpc_cidr"             {}
