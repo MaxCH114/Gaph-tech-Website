@@ -11,12 +11,12 @@ module "vpc" {
   private_subnet_az1_b = var.private_subnet_az1_b
   private_subnet_az1_c = var.private_subnet_az1_c
   region               = var.region
-  my_ip                = var.my_ip
+  
 }
 
 module "Security_Groups" {
   source = "./modules/Security_Groups"
   vpc_id = module.vpc.vpc_id
-  my_ip  = var.my_personal_computer_ip
+  my_ip  = var.my_ip
   SG_name = var.sg_name
 }
