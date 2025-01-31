@@ -31,3 +31,7 @@ output "private_subnet_az1_c_id" {
 output "internet_gateway_id" {
   value = aws_internet_gateway.My_data_center_Cloud_internet_gateway.id
 }
+
+output "project_name" {
+  value = var.project_name
+}

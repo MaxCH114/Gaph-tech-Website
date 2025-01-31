@@ -1,3 +1,4 @@
+
 # This file is used to configure the provider and backend for the terraform code.
 # The provider is the plugin that terraform uses to interact with the cloud provider.
 
