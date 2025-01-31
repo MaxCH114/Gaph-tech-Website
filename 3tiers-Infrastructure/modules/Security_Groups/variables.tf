@@ -13,6 +13,5 @@ variable "my_ip" {
 variable "sg_name" {
   type        = string
   description = "Security Group Name"
-  default     = "Safety_Group"
 }
 
