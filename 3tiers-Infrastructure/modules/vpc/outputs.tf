@@ -28,6 +28,18 @@ output "private_subnet_az1_c_id" {
   value = aws_subnet.private_subnet_az1_c.id
 }
 
+output "db_subnet_az1_a_id" {
+  value = aws_subnet.db_subnet_az1_a.id
+}
+
+output "route_table_id" {
+  value = aws_route_table.public_route_table.id
+}
+
+output "private_route_table_id" {
+  value = aws_route_table.private_route_table.id
+}
+
 output "internet_gateway_id" {
   value = aws_internet_gateway.My_data_center_Cloud_internet_gateway.id
 }

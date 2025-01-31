@@ -92,6 +92,36 @@ resource "aws_subnet" "private_subnet_az1_c" {
   }
 }
 
+#Create private db subnet us-east-1a
+resource "aws_subnet" "db_subnet_az1_a" {
+  vpc_id            = aws_vpc.My_data_center_Cloud.id
+  cidr_block        = var.db_subnet_az1_a
+  availability_zone = data.aws_availability_zones.availability_zones.names[0]
+  tags = {
+    Name            = "${var.project_name}-DB-Subnet-az1-a"
+  }
+}
+
+#Create private db subnet us-east-1b
+resource "aws_subnet" "db_subnet_az1_b" {
+  vpc_id            = aws_vpc.My_data_center_Cloud.id
+  cidr_block        = var.db_subnet_az1_b
+  availability_zone = data.aws_availability_zones.availability_zones.names[1]
+  tags = {
+    Name            = "${var.project_name}-DB-Subnet-az1-b"
+  }
+}
+
+#Create private db subnet us-east-1c
+resource "aws_subnet" "db_subnet_az1_c" {
+  vpc_id            = aws_vpc.My_data_center_Cloud.id
+  cidr_block        = var.db_subnet_az1_c
+  availability_zone = data.aws_availability_zones.availability_zones.names[2]
+  tags = {
+    Name            = "${var.project_name}-DB-Subnet-az1-c"
+  }
+} 
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 #create route table and public route
 #Route table is used to determine where network traffic is directed in that case to the internet gateway
@@ -160,3 +190,23 @@ resource "aws_route_table_association" "private_subnet_az1_c_association" {
   route_table_id = aws_route_table.private_route_table.id
 }
 
+#associate private db subnet us-east-1a with private route table
+#Route table association is used to associate a subnet with a route table in that case the private subnet with the private route table
+resource "aws_route_table_association" "db_subnet_az1_a_association" {
+  subnet_id      = aws_subnet.db_subnet_az1_a.id
+  route_table_id = aws_route_table.private_route_table.id
+}
+
+#associate private db subnet us-east-1b with private route table
+#Route table association is used to associate a subnet with a route table in that case the private subnet with the private route table
+resource "aws_route_table_association" "db_subnet_az1_b_association" {
+  subnet_id      = aws_subnet.db_subnet_az1_b.id
+  route_table_id = aws_route_table.private_route_table.id
+}
+
+#associate private db subnet us-east-1c with private route table
+#Route table association is used to associate a subnet with a route table in that case the private subnet with the private route table
+resource "aws_route_table_association" "db_subnet_az1_c_association" {
+  subnet_id      = aws_subnet.db_subnet_az1_c.id
+  route_table_id = aws_route_table.private_route_table.id
+}

@@ -21,11 +21,9 @@ variable "private_subnet_az1_c" {}
 variable "region" {}
 
 
-
 variable "sg_name" {
   type        = string
   description = "Security Group Name"
-  default     = "Safety_Group"
 }
 
 variable "my_ip" {
