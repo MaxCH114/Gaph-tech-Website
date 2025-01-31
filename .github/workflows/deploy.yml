@@ -34,11 +34,11 @@ jobs:
       run: terraform plan
       working-directory: ./3tiers-Infrastructure
 
-    - name: apply Terraform deployment
-      run: terraform apply -auto-approve
-      working-directory: ./3tiers-Infrastructure
+    #- name: apply Terraform deployment
+    #  run: terraform apply -auto-approve
+    #  working-directory: ./3tiers-Infrastructure
       
-    #- name: destroy Terraform deployment
-    #  run: terraform destroy -auto-approve
-    # working-directory: ./Create a Custom VPC with Subnets 
+    - name: destroy Terraform deployment
+      run: terraform destroy -auto-approve
+      working-directory: ./3tiers-Infrastructure 
       
